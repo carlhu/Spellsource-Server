@@ -1,0 +1,63 @@
+{
+  "name": "Headless Horseman",
+  "baseManaCost": 8,
+  "type": "MINION",
+  "heroClass": "ANY",
+  "baseAttack": 3,
+  "baseHp": 9,
+  "rarity": "LEGENDARY",
+  "race": "DRAGON",
+  "description": "Battlecry: Fill your board with dormant 4/4 Squashlings. Deathrattle: Awaken your Squashlings.",
+  "battlecry": {
+    "spell": {
+      "class": "MetaSpell",
+      "spells": [
+        {
+          "class": "SummonSpell",
+          "boardPositionRelative": "RIGHT",
+          "card": "token_insidious_squashling"
+        },
+        {
+          "class": "SummonSpell",
+          "boardPositionRelative": "LEFT",
+          "card": "token_insidious_squashling"
+        },
+        {
+          "class": "SummonSpell",
+          "boardPositionRelative": "RIGHT",
+          "card": "token_insidious_squashling"
+        },
+        {
+          "class": "SummonSpell",
+          "boardPositionRelative": "LEFT",
+          "card": "token_insidious_squashling"
+        },
+        {
+          "class": "SummonSpell",
+          "boardPositionRelative": "RIGHT",
+          "card": "token_insidious_squashling"
+        },
+        {
+          "class": "SummonSpell",
+          "boardPositionRelative": "LEFT",
+          "card": "token_insidious_squashling"
+        }
+      ]
+    }
+  },
+  "deathrattle": {
+    "spell": {
+      "class": "RemoveAttributeSpell"
+	  "attribute": "PERMANENT"
+      "target": "token_insidious_squashling"
+	}
+  },
+  "attributes": {
+    "BATTLECRY": true,
+	"DEATHRATTLE": true,
+    "SPELLSOURCE_NAME": "Emperor Colossus"
+  },
+  "collectible": true,
+  "set": "CUSTOM",
+  "fileFormatVersion": 1
+}

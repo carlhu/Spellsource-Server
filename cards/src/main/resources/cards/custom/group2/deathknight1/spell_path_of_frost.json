@@ -1,0 +1,26 @@
+{
+  "name": "Path of Frost",
+  "baseManaCost": 3,
+  "type": "SPELL",
+  "heroClass": "ICE",
+  "rarity": "COMMON",
+  "description": "Choose a minion. Whenever it attacks, it hits the enemy hero instead.",
+  "targetSelection": "MINIONS",
+  "spell": {
+    "class": "AddEnchantmentSpell",
+    "trigger": {
+      "eventTrigger": {
+        "class": "PhysicalAttackTrigger",
+        "hostTargetType": "IGNORE_OTHER_SOURCES"
+      },
+      "spell": {
+        "class": "FightSpell",
+        "target": "ENEMY_HERO"
+      },
+      "persistentOwner": true
+    }
+  },
+  "collectible": true,
+  "set": "CUSTOM",
+  "fileFormatVersion": 1
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Chains of Ice",
+  "baseManaCost": 2,
+  "type": "SPELL",
+  "heroClass": "Ice",
+  "rarity": "COMMON",
+  "description": "Silence then Freeze a minion. If it was already Frozen, draw a card.",
+  "targetSelection": "MINIONS",
+  "spell": {
+    "class": "ConditionalSpell",
+    "condition": {
+      "class": "AttributeCondition",
+      "attribute": "FROZEN",
+      "operation": "HAS"
+    },
+    "spell1": {
+      "class": "DrawCardSpell"
+    },
+    "spell2": {
+      "class": "MetaSpell",
+	  "spells":[
+	    {
+		"class": "AddAttributeSpell",
+		"attribute": "FROZEN"
+		},
+		{
+		"class": "SilenceSpell"
+		},
+	  ]
+    }
+  },
+  "collectible": true,
+  "set": "CUSTOM",
+  "fileFormatVersion": 1
+}
